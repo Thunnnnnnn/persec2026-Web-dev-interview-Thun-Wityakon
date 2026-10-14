@@ -33,7 +33,7 @@ function preInterview3(search: string, items: string[], maxResults: number) {
         if (results.length >= maxResults) {
             return;
         }
-        if (item.includes(search)) {
+        if (item.toLowerCase().includes(search.toLowerCase())) {
             results.push(item);
         }
     });
@@ -74,7 +74,7 @@ function preInterview6(t: number[], n: number) {
 function main() {
     // const result = preInterview1();
     // console.log('Result 1:', result);
-    const result3 = preInterview3('item', ['item1', 'item2', 'searchTermItem'], 2);
+    const result3 = preInterview3('th', ["Mother", "Think", "Worthy", "Apple", "Android"], 2);
     console.log('Result 3:', result3);
     // const result5 = preInterview5();
     // console.log('Result 5:', result5);
