@@ -48,11 +48,23 @@ function preInterview5() {
     return Number(result);
 }
 
+function preInterview6(t: number[], n: number) {
+    let result: number[] = t;
+    for (let i = 3; i < n; i++) {
+        const sum = result[i - 1]! + result[i - 2]! + result[i - 3]!;
+        result.push(sum);
+    }
+
+    return result;
+}
+
 function main() {
     // const result = preInterview1();
     // console.log('Result 1:', result);
-    const result5 = preInterview5();
-    console.log('Result 5:', result5);
+    // const result5 = preInterview5();
+    // console.log('Result 5:', result5);
+    const result6 = preInterview6([10, 10, 10], 4);
+    console.log('Result 6:', result6);
 }
 
 main();
